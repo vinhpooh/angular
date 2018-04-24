@@ -9,6 +9,8 @@ import { PageNotFoundModule } from './page-not-found/page-not-found.module';
 import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
+import { ItemsModule } from './items/items.module';
+import { CollectionService } from './core/services/collection.service';
 
 @NgModule({
   imports: [
@@ -17,12 +19,13 @@ import { AppComponent } from './app.component';
     CoreModule,
     NgbModule.forRoot(),
     HomeModule,
-    PageNotFoundModule
+    PageNotFoundModule,
+    ItemsModule
   ],
   declarations: [
     AppComponent
   ],
-  providers: [],
+  providers: [CollectionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

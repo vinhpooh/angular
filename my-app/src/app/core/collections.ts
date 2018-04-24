@@ -1,7 +1,7 @@
 import { Item } from '../shared/models/item.model';
 import { State } from '../shared/enums/state.enum';
 
-export const COLLETION: Item[] = [
+export const COLLECTION: Item[] = [
   {
     id: '1',
     name: 'toto',
