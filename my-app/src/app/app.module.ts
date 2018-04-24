@@ -24,7 +24,7 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     HomeModule,
     ItemsModule,
-    PageNotFoundModule
+    PageNotFoundModule // faire cet import en dernier pour mettre le wildcard en dernier dans la route
   ],
     declarations: [
     AppComponent
