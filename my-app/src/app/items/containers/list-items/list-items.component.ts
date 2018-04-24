@@ -9,8 +9,10 @@ import { Item } from '../../../shared/models/item.model';
 })
 export class ListItemsComponent implements OnInit {
 
+  // ajout de service privé --> accessible que depuis le ts
   constructor(private collectionService: CollectionService) { }
 
+  // attribut public --> accessible dans le html
   collection: Item[];
 
   ngOnInit() {

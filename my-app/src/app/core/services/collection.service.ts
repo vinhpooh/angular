@@ -5,6 +5,7 @@ import { COLLECTION } from '../collections';
 @Injectable()
 export class CollectionService {
 
+  // creation d'un alias pour utiliser le getteur et setteur d'angular
   private _collection: Item[];
 
   constructor() {
@@ -12,11 +13,13 @@ export class CollectionService {
    }
 
   // get collection
+  // getteur d'angular
   get collection(): Item[] {
     return this._collection;
   }
 
   // set collection
+  // setteur d'angular
   set collection(collection: Item[]) {
     this._collection = collection;
   }
