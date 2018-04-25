@@ -46,8 +46,4 @@ export class AddComponent implements OnInit {
     return this.form.get(field).invalid && this.form.get(field).touched;
   }
 
-  validateReference(){
-
-  }
-
 }
