@@ -4,14 +4,14 @@ import { ListItemsComponent } from './containers/list-items/list-items.component
 import { SharedModule } from '../shared/shared.module';
 import { ItemsRoutingModule } from './items-routing.module';
 import { AddComponent } from './containers/add/add.component';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     SharedModule,
     ItemsRoutingModule,
-    FormsModule
+    ReactiveFormsModule
   ],
   declarations: [ListItemsComponent, AddComponent],
   exports: [ListItemsComponent]

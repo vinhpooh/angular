@@ -1,21 +1,19 @@
 <div class="container">
-  <form class="form" #form="ngForm" (ngSubmit)="process()" novalidate>
+  <form class="form" (ngSubmit)="process()" [formGroup]="form" novalidate>
   <!-- novalidate permet de supprimer la validation automatique du navigateur -->
 
     <div class="form-group">
-      <input type="text" name="name" class="form-control" placeholder="name" required minlength="2"
-      #name="ngModel" [(ngModel)]="newItem.name">{{ newItem.name }}
-      <div class="alert alert-danger" *ngIf="name.invalid && name.touched">champs invalide</div>
+      <input type="text" class="form-control" placeholder="name" formControlName="name">
+      <div class="alert alert-danger" *ngIf="form.get('name').invalid && form.get('name').touched">champs invalide</div>
     </div>
 
     <div class="form-group">
-      <input type="text" name="reference" class="form-control" placeholder="reference" required minlength="5"
-      #reference="ngModel" [(ngModel)]="newItem.reference">{{ newItem.reference }}
-      <div class="alert alert-danger" *ngIf="reference.invalid && reference.touched">champs invalide</div>
+      <input type="text" class="form-control" placeholder="reference" formControlName="reference">
+      <div class="alert alert-danger" *ngIf="form.get('reference').invalid && form.get('reference').touched">champs invalide</div>
     </div>
 
     <div class="form-group">
-      <select class="form-control" name="state" [(ngModel)]="newItem.state">
+      <select class="form-control" formControlName="state">
         <option *ngFor="let libelle of libelles" [ngValue]="libelle">{{ libelle }}</option>
       </select>
     </div>
