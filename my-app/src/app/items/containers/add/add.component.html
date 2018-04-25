@@ -4,12 +4,12 @@
 
     <div class="form-group">
       <input type="text" class="form-control" placeholder="name" formControlName="name">
-      <div class="alert alert-danger" *ngIf="form.get('name').invalid && form.get('name').touched">champs invalide</div>
+      <div class="alert alert-danger" *ngIf="isError('name')">champs invalide</div>
     </div>
 
     <div class="form-group">
       <input type="text" class="form-control" placeholder="reference" formControlName="reference">
-      <div class="alert alert-danger" *ngIf="form.get('reference').invalid && form.get('reference').touched">champs invalide</div>
+      <div class="alert alert-danger" *ngIf="isError('reference')">champs invalide</div>
     </div>
 
     <div class="form-group">

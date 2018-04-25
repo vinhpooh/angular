@@ -42,4 +42,12 @@ export class AddComponent implements OnInit {
     this.router.navigate(['/list']);
   }
 
+  isError(field: string): boolean {
+    return this.form.get(field).invalid && this.form.get(field).touched;
+  }
+
+  validateReference(){
+
+  }
+
 }
