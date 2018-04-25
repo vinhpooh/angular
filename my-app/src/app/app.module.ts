@@ -9,7 +9,6 @@ import { CollectionService } from './core/services/collection.service';
 import { CoreModule } from './core/core.module';
 import { environment } from '../environments/environment';
 import { HomeModule } from './home/home.module';
-import { ItemsModule } from './items/items.module';
 import { PageNotFoundModule } from './page-not-found/page-not-found.module';
 import { SharedModule } from './shared/shared.module';
 
@@ -23,7 +22,6 @@ import { AppComponent } from './app.component';
     NgbModule.forRoot(),
     AppRoutingModule,
     HomeModule,
-    ItemsModule,
     PageNotFoundModule // faire cet import en dernier pour mettre le wildcard en dernier dans la route
   ],
     declarations: [
