@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CollectionService } from '../../../core/services/collection.service';
 import { Item } from '../../../shared/models/item.model';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-list-items',
@@ -13,7 +14,7 @@ export class ListItemsComponent implements OnInit {
   constructor(private collectionService: CollectionService) { }
 
   // attribut public --> accessible dans le html
-  collection: Item[];
+  collection: Observable<Item[]>;
 
   ngOnInit() {
     this.collection = this.collectionService.collection;

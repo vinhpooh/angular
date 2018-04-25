@@ -20,8 +20,8 @@ export class AddComponent implements OnInit {
 
   add(newItem: Item) {
     console.log(newItem);
-    this.collectionService.collection.push(newItem);
-    this.router.navigate(['/list']);
+    // this.collectionService.collection.push(newItem);
+    // this.router.navigate(['/list']);
   }
 
 }
